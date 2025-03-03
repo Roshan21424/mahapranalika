@@ -33,7 +33,7 @@ public class MainController {
         String date = data.get("date").toString();
         String timeSlot = data.get("timeSlot").toString();
 
-        RazorpayClient razorpayClient = new RazorpayClient("rzp_test_lrfsMHA040VpXQ", "bJXFwV8ereVxtRsW3xjXUP3x");
+        RazorpayClient razorpayClient = new RazorpayClient("rzp_live_Feu7veD5q1RUz", "Khe5N8pxjDRdyAL1YNEVvmR9");
 
         JSONObject options = new JSONObject();
         options.put("amount", amt * 100);
