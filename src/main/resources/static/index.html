@@ -60,7 +60,7 @@
         const email = document.getElementById("email").value;
         const date = document.getElementById("date").value;
         const timeSlot = document.getElementById("timeSlot").value;
-        const amount = 999 * 100; // Convert to paise
+        const amount = 999; // Convert to paise
 
         const response = await fetch("/user/create_order", {
             method: "POST",

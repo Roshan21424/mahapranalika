@@ -63,8 +63,8 @@ public class MainController {
             options.put("razorpay_payment_id", razorpayPaymentId);
             options.put("razorpay_signature", razorpaySignature);
 
-            RazorpayClient razorpayClient = new RazorpayClient("rzp_test_lrfsMHA040VpXQ", "bJXFwV8ereVxtRsW3xjXUP3x");
-            boolean isValid = Utils.verifyPaymentSignature(options, "bJXFwV8ereVxtRsW3xjXUP3x");
+            RazorpayClient razorpayClient = new RazorpayClient("rzp_live_Feu7veD5q1RUz", "Khe5N8pxjDRdyAL1YNEVvmR9");
+            boolean isValid = Utils.verifyPaymentSignature(options, "Khe5N8pxjDRdyAL1YNEVvmR9");
 
             if (isValid) {
                 // Payment is valid, send confirmation email
