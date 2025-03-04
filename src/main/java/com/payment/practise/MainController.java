@@ -90,17 +90,21 @@ public class MainController {
             MimeMessage message = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
             helper.setTo(to);
-            helper.setSubject("Booking Confirmation");
+            helper.setSubject("Your Slot Booking Confirmation");
+
             String emailContent = "<h3>Dear " + name + ",</h3>" +
-                    "<p>Your booking has been confirmed.</p>" +
-                    "<p><strong>Details:</strong></p>" +
+                    "<p>We are delighted to confirm your booking.</p>" +
+                    "<p><strong>Booking Details:</strong></p>" +
                     "<ul>" +
                     "<li><strong>Date:</strong> " + date + "</li>" +
                     "<li><strong>Time Slot:</strong> " + timeSlot + "</li>" +
                     "<li><strong>Amount Paid:</strong> INR " + amount + "</li>" +
                     "<li><strong>Transaction ID:</strong> " + transactionId + "</li>" +
                     "</ul>" +
-                    "<p>Thank you for booking with us!</p>";
+                    "<p>Thank you for choosing our services. If you have any questions or need further assistance, please feel free to reach out.</p>" +
+                    "<p>We look forward to serving you!</p>" +
+                    "<p>Best regards,</p>" +
+                    "<p><strong>-Mahapranalika</strong></p>";
 
             helper.setText(emailContent, true);
             mailSender.send(message);
@@ -108,6 +112,7 @@ public class MainController {
             e.printStackTrace();
         }
     }
+
     @GetMapping("/bookslot")
     public void hello(HttpServletResponse response) throws IOException {
         response.sendRedirect("/index.html");
